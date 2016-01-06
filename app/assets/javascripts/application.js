@@ -16,5 +16,9 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('#example').DataTable();
+  $('#example').DataTable(
+      {
+          "order": [[ 1, "asc" ]]
+      }
+  );
 } );
