@@ -6,6 +6,10 @@
     <tr>
       <th>Domain</th>
       <th>Record type</th>
+      <th>Response</th>
+      <th>Title</th>
+      <th>Resolves To</th>
+      <th>Verified At</th>
     </tr>
   </thead>
 
@@ -14,6 +18,10 @@
       <tr>
         <td><%= link_to "#{domain.domain}", "http://#{domain.domain}", :target => "_blank" %></td>
         <td><%= domain.record_type %></td>
+        <td><%= domain.response %></td>
+        <td><%= domain.title %></td>
+        <td><%= domain.resolves_to %></td>
+        <td><%= domain.verified_at.strftime("%m/%d/%Y") unless domain.verified_at.blank?  %></td>
       </tr>
     <% end %>
   </tbody>
