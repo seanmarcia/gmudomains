@@ -5,6 +5,10 @@ class DomainsController < ApplicationController
   # GET /domains.json
   def index
     @domains = Domain.all
+    respond_to do |format|
+      format.html
+      format.csv { render text: @domains.to_csv }
+    end
   end
 
   # GET /domains/1
